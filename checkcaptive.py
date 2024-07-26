@@ -6,6 +6,7 @@ import subprocess
 dir_path = os.path.dirname(os.path.realpath(__file__))
 
 GOOGLE_GEN_204_URL = "http://clients1.google.com/generate_204"
+FREQ = 15 # Seconds
 
 class RepeatTimer(Timer):
     def run(self):
@@ -33,5 +34,7 @@ def captivepass():
         login()
 
 if __name__ == "__main__":
-    captive_checker = RepeatTimer(15, captivepass)
+    print("Started the Captive Checker script")
+    captive_checker = RepeatTimer(FREQ, captivepass)
     captive_checker.start()
+    captive_checker.join()
