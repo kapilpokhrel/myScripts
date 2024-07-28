@@ -3,8 +3,9 @@ Description=Serivce to check for captive protal and login if behind one
 After=multi-user.target
 [Service]
 Type=simple
-ExecStart=source {PWD}/.venv/bin/activate && {PWD}/.venv/bin/python3 {PWD}/checkcaptive.py
+ExecStart={PWD}/.venv/bin/python3 {PWD}/checkcaptive.py
 WorkingDirectory={PWD}
 Restart=always
+RestartSec=1
 [Install]
 WantedBy=multi-user.target
