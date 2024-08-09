@@ -7,8 +7,8 @@ URL = 'https://10.100.1.1:8090/login.xml'
 
 DATA = {
     'mode':191,
-    'username':'080bct038',
-    'password':'3732-2767',
+    'username':'********',
+    'password':'********',
     'a':int(time.time()),
     'producttype':0
 }
